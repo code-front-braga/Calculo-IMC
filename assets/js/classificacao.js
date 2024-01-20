@@ -9,8 +9,6 @@ const classificacaoImc = (peso, altura) => {
   ];
   const h3 = document.querySelector('.classificacao');
   const imc = calculoImc(peso, altura);
-  // const resultado = document.querySelector('.resultado');
-  // resultado.appendChild(imc)
 
   const ulDicas = document.querySelector('.dicas');
   const img = document.querySelector('.ilustracao');
@@ -24,7 +22,7 @@ const classificacaoImc = (peso, altura) => {
       <li>Pratique atividade física regularmente: A atividade física regular<br> pode ajudar a queimar calorias e <br>melhorar a saúde cardiovascular e metabólica</li>
       <li>Procure apoio: A obesidade mórbida pode ser uma condição desafiadora <br>e pode ser útil procurar apoio <br>de amigos, familiares ou grupos de apoio</li>    
       `;
-    img.src = '/assets/img/grau3.jpg';
+    img.src = './assets/img/grau3.jpg';
   } else if (imc >= 34.9) {
     h3.innerHTML = `Você está ${classificacao[4]};`;
     ulDicas.innerHTML = `Aqui vai algumas dicas:
@@ -39,7 +37,7 @@ const classificacaoImc = (peso, altura) => {
       <li>Consulte um nutricionista para ajustar sua dieta de acordo <br>com suas necessidades específicas</li>
       <li>Alguns medicamentos podem ser úteis, mas devem ser <br>prescritos por um profissional</li>
       `;
-    img.src = '/assets/img/grau2.jpg';
+    img.src = './assets/img/grau2.jpg';
   } else if (imc >= 29.9) {
     h3.innerHTML = `Você está ${classificacao[3]};`;
     ulDicas.innerHTML = `
@@ -55,7 +53,7 @@ const classificacaoImc = (peso, altura) => {
       <li>Consulte um nutricionista para ajustar sua dieta de acordo com suas necessidades específicas</li>
       <li>Alguns medicamentos podem ser úteis, mas devem ser prescritos por um profissional</li>
       `;
-    img.src = '/assets/img/grau1.jpg';
+    img.src = './assets/img/grau1.jpg';
   } else if (imc >= 24.9) {
     h3.innerHTML = `Você está ${classificacao[2]};`;
     ulDicas.innerHTML = `
@@ -68,7 +66,7 @@ const classificacaoImc = (peso, altura) => {
       <li>Consulte um nutricionista para ajustar sua dieta de acordo com suas necessidades específicas</li>
       <li>Alguns medicamentos podem ser úteis, mas devem ser prescritos por um profissional</li>
       `;
-    img.src = '/assets/img/sobrepeso.jpg';
+    img.src = './assets/img/sobrepeso.jpg';
   } else if (imc >= 18.5) {
     h3.innerHTML = `Você está ${classificacao[1]};`;
     ulDicas.innerHTML = `Aqui vai algumas dicas para manter seu peso normal:
@@ -81,7 +79,7 @@ const classificacaoImc = (peso, altura) => {
       <li>Praticar exercícios que queimam gordura</li>
       <li>Diminuir o consumo de sal e açúcar</li>  
       `;
-    img.src = '/assets/img/8440459.jpg';
+    img.src = './assets/img/8440459.jpg';
   } else if (imc < 18.5) {
     h3.innerHTML = `Você está ${classificacao[0]};`;
     ulDicas.innerHTML = `
@@ -94,6 +92,6 @@ const classificacaoImc = (peso, altura) => {
       <li>Se necessário, consulte um profissional para escolher suplementos adequados, <br>como shakes de proteína ou suplementos vitamínicos</li>
       <li>Exercícios de resistência, como musculação, podem ajudar a ganhar massa muscular</li>
       `;
-    img.src = '/assets/img/abaixopeso.png';
+    img.src = './assets/img/abaixopeso.png';
   }
 };
